@@ -146,4 +146,4 @@ A paraître en octobre (hopefully!)
 - Shane Curcuru, *The Apache Way*. [WEB](http://theapacheway.com/).
 - *The OSPO – A New Tool for Digital Government*. Open Forum Europe / OSPO Zone (2022). [PDF disponible ici](https://openforumeurope.org/publications/the-ospo-a-new-tool-for-digital-government/).
 - Nadia Eghbal, *Roads & Bridges: The Unseen Labor Behind Our Digital Infrastructure*. Ford Foundation. [PDF disponible ici](https://www.fordfoundation.org/work/learning/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/).
-- Andrew J. Hall, *Open-Source Business Models: Making money by giving it away*. Santa Clara High Technology Law Journa (2017). [PDF disponible ici](https://digitalcommons.law.scu.edu/chtlj/vol33/iss3/3/).
+- Andrew J. Hall, *Open-Source Business Models: Making money by giving it away*. Santa Clara High Technology Law Journal (2017). [PDF disponible ici](https://digitalcommons.law.scu.edu/chtlj/vol33/iss3/3/).
