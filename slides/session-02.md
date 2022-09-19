@@ -10,7 +10,9 @@ slide-transition: true
 
 # Plan de la session
 
-- Un peu d'histoire: émergence du libre et de Linux
+- Un peu d'histoire (suite): 
+  - Unix
+  - Emergence du libre et de Linux
 - La définition de l'open source
 
 ---
@@ -19,14 +21,21 @@ slide-transition: true
 
 ---
 
-# Le marché Unix ~1991
+# Le marché Unix ~1990
+
+[.column]
+**Constructeurs**
 
 - Sun - puces 680xx puis SPARC / SunOS (basé sur BSD) puis Solaris
-- DEC - puces VAX puis Alpha / Ultrix
+- DEC - puces VAX puis Alpha / Ultrix puis Tru64
 - IBM - puces PowerPC / A/IX
 - SGI - puces MIPS / IRIX
 - HP - puces PA-RISC / HP-UX
 - Next - puces 680xx puis x86 + NextSTEP (surcouche de BSD)
+
+[.column]
+**Editeurs**
+
 - SCO - éditeur (-> PC "standard")
 - Apple - A/UX
 - Microsoft - XENIX
@@ -37,6 +46,28 @@ slide-transition: true
 # Guerre des Unix
 
 - https://en.wikipedia.org/wiki/Unix_wars
+- https://www.computerworld.com/article/2524456/unix-turns-40--the-past--present-and-future-of-a-revolutionary-os.html?page=4
+
+
+---
+
+# Windows NT la menace
+
+![right fit](images/is-unix-dead.jpg)
+
+https://en.wikipedia.org/wiki/Windows_NT
+
+---
+
+![fit](images/unix-market-1999.png)
+
+---
+
+![fit](images/server-market-1999.png)
+
+---
+
+![fit](images/unix-market.png)
 
 ---
 
@@ -57,9 +88,185 @@ Aujourd'hui, la marque déposée UNIX est détenue par l'Open Group. Pour obteni
 
 ---
 
-# Windows NT la menace
+# Interlude: la "philosophie Unix"
 
-https://en.wikipedia.org/wiki/Windows_NT
+---
+
+# La culture Unix
+
+- Unix a créé une culture
+- Les gens voulaient un meilleur système informatique, plus efficace.
+- Ces personnes étaient logiques et pragmatiques dans leur réflexion.
+- Ils ont jeté les bases de : "La philosophie Unix"
+
+---
+
+# Doug McIlroy (1978)
+
+![right fit](images/mcilroy.jpeg)
+
+- (i) Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new features.
+
+- (ii) Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.
+
+- (iii) Design and build software, even operating systems, to be tried early, ideally within weeks. Don't hesitate to throw away the clumsy parts and rebuild them.
+
+- (iv) Use tools in preference to unskilled help to lighten a programming task, even if you have to detour to build the tools and expect to throw some of them out after you've finished using them.
+
+---
+
+# The invention of pipes (1973)
+
+And in their ensuing conversation, the historian establishes that this was the moment that truly gave birth to the idea that Unix is a collection of tools.
+
+- Mahoney: Was the notion of toolbox there before pipes?
+- McIlroy: No.
+- Mahoney: Or did pipes create it?
+- McIlroy: Pipes created it.
+- Mahoney: Unix looked different after pipes?
+- McIlroy: Yes, the philosophy that everybody started putting forth, “This is the Unix philosophy. Write programs that do one thing and do it well. Write programs to work together. Write programs that handle text streams, because that is a universal interface.” All of those ideas, which add up to the tool approach, might have been there in some unformed way prior to pipes, but they really they came in afterwards.
+
+---
+
+![right fit](images/art-unix-programming.jpg)
+
+# Eric S. Raymond
+
+- Rule of Modularity: Write simple parts connected by clean interfaces.
+- Rule of Clarity: Clarity is better than cleverness.
+- Rule of Composition: Design programs to be connected to other programs.
+- Rule of Separation: Separate policy from mechanism; separate interfaces from engines.
+- Rule of Simplicity: Design for simplicity; add complexity only where you must.
+- Rule of Parsimony: Write a big program only when it is clear by demonstration that nothing else will do.
+- Rule of Transparency: Design for visibility to make inspection and debugging easier.
+
+----
+
+# (cont.)
+
+- Rule of Robustness: Robustness is the child of transparency and simplicity.
+- Rule of Representation: Fold knowledge into data so program logic can be stupid and robust.
+- Rule of Least Surprise: In interface design, always do the least surprising thing.
+- Rule of Silence: When a program has nothing surprising to say, it should say nothing.
+- Rule of Repair: When you must fail, fail noisily and as soon as possible.
+- Rule of Economy: Programmer time is expensive; conserve it in preference to machine time.
+- Rule of Generation: Avoid hand-hacking; write programs to write programs when you can.
+- Rule of Optimization: Prototype before polishing. Get it working before you optimize it.
+- Rule of Diversity: Distrust all claims for “one true way”.
+- Rule of Extensibility: Design for the future, because it will be here sooner than you think.
+
+---
+
+# Rule of Modularity
+
+Write simple parts connected by clean interfaces.
+Software can be very complicated, especially for large systems.
+Its even hard for the programming to cope with the complexity.
+Take a modular approach and build many small, but simple components.
+These components work together through simple and clean interfaces.
+
+---
+
+# Rule of Clarity
+
+Clarity is better than cleverness.
+Write code for humans to read, first!
+
+---
+
+# Rule of Composition
+
+Design programs to be connected with other programs
+THINK PIPE!
+Stick with text streams for input and output.
+Avoid the use of user input (for example, prompt for “yes”), use command line
+flags instead.
+To make programs composable, make them independent. A program on one
+end of a text stream should care as little as possible about the program on the
+other end.
+
+---
+
+# Rule of Simplicity
+
+Design for simplicity; add complexity only where you must.
+The notion of “intricate and beautiful complexities” is almost an oxymoron.
+Complexity leads to bugs.
+Keep programs as simple as possible. Sometimes less is more.
+“Worse” is “better”.
+If other processing is required, consider writing another programming and
+exploiting composibility . . i.e. piping.
+
+---
+
+# Rule of Transparency
+
+Design for visibility to make inspection and debugging easier.
+Debugging dominates development. Unix is made to have programs work together.
+Make it easy to understand how your program works (i.e. make it transparent).
+For a program to demonstrate its own correctness, it needs to be using input and output formats sufficiently simple so that the proper relationship between valid input and correct output is easy to check.
+A good ʻmanual pageʼ with examples also helps!
+
+---
+
+# Rule of Robustness
+
+Robustness is the child of transparency and simplicity.
+Program should work well. Minimize when it fails, and when it does fail, fail gracefully.
+Consider situations, just as accepting empty lists/strings/etc., even in
+places where a human would seldom or never supply an empty
+string, avoids having to special-case such situations when generating
+the input mechanically.
+
+---
+
+# Rule of Least Surprise
+
+In interface design, always do the least surprising thing.
+
+The easiest programs to use are those that demand the least new learning from the user.
+Stick with convention (+ means add).
+Consider your audience.
+Program used by sys administrators may have different common practices than a program used by programmers.
+Avoid excessive features, novelty.
+
+---
+
+# Rule of Silence
+
+When a program has nothing surprising to say, it should say nothing.
+
+I think that the terseness of Unix programs is a central feature of the style.
+When your program's output becomes another's input, it should be easy to
+pick out the needed bits. And for people it is a human-factors necessity —
+important information should not be mixed in with verbosity about internal
+program behavior. If all displayed information is important, important
+information is easy to find.
+-- Ken Arnold
+
+---
+
+# Rule of Repair
+Repair what you can — but when you must fail, fail noisily and as soon as possible.
+
+Basically, if it is something minor, fix it (or consider handling it), but if you “fail” then make sure you cause a detectable failure to the other programs.
+Also, if possible, make it clear why it failed.
+
+---
+
+# Rule of Optimization
+Prototype before polishing. Get it working before you optimize it.
+
+“90% of the functionality delivered now is better than 100% of it delivered never!”
+- Kernighan & Plauger
+(Kernighan is co-author of the C Programming Book)
+
+“Premature optimization is the root of all evil”
+– Donald Knuth (Computing “Grandfather”)
+
+---
+
+# Retour à la chronologue
 
 ---
 
