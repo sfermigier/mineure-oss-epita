@@ -4,14 +4,14 @@ build-lists: true
 slide-transition: true
 
 # Mineure OSS @ EPITA
-## Session 2 (draft)
+## Session 2
 
 ---
 
 # Plan de la session
 
-- Un peu d'histoire (suite): 
-  - Unix
+- Un peu d'histoire (suite):
+  - Unix et sa "philosophie"
   - Emergence du libre et de Linux
 - La définition de l'open source
 
@@ -45,9 +45,24 @@ slide-transition: true
 
 # Guerre des Unix
 
-- https://en.wikipedia.org/wiki/Unix_wars
-- https://www.computerworld.com/article/2524456/unix-turns-40--the-past--present-and-future-of-a-revolutionary-os.html?page=4
+- AT&T tente d'imposer sa variante (System V) comme le standard, et s'allie avec Sun pour intégrer TCP/IP (en provenance de BSD).
+- 1984: Formation du groupe de normalisation X/Open en 1984, dans le but de créer des systèmes ouverts compatibles, basés sur Unix. Les membres fondateurs sont les constructeurs Unix européens: Bull, ICL, Siemens, Olivetti, Nixdorf, rejoints ensuite (1988) par d'autres:  AT&T, Digital, Hewlett-Packard, Sun Microsystems, Unisys, NCR...)
+- 1987: Sortie de System V Release 4 (SVR4).
+- 1988: Formation de Open Software Foundation (OSF) par les concurrents de Sun (IBM, HP, DEC...)
+- 1994: transfert de la marque "Unix" de Novell à X/Open
+- 1996: fusion de OSF et X/Open pour donner "The Open Group"
 
+---
+
+# POSIX et la standardisation d'Unix
+
+Le grand nombre de systèmes Unix développés sur la base du System V de AT&T ou bien de BSD conduisit des membres du groupe d'utilisateurs /usr/group, qui a pris depuis le nom de UniForum, à forger un standard UNIX dès 1980 afin d'assurer une portabilité maximale entre les différents systèmes :
+
+- en 1984 ce groupe publie le standard /usr/group
+- ce standard évolue en POSIX en 1988 sous l'égide de l'IEEE (le terme POSIX a été suggéré par Richard Stallman, qui faisait partie du comité qui écrivit la première version de la norme.)
+- en 1985, AT&T publie SVID (System V Interface Definition), qui décrit System V.Cette première définition est différente de POSIX.
+- À la même époque, publications de différents standards par X/Open et OSF.
+- 1994: publication de "Single UNIX Specification" par X/Open, qui finira par etre intégré à la norme POSIX.
 
 ---
 
@@ -55,11 +70,11 @@ slide-transition: true
 
 ![right fit](images/is-unix-dead.jpg)
 
-https://en.wikipedia.org/wiki/Windows_NT
+Windows NT (« New technology ») désigne la série de systèmes d'exploitation multitâche préemptif, multi-utilisateur, multiprocesseur, créés par Microsoft et ne reposant pas sur le système historique MS-DOS de Microsoft (contrairement à Windows 1.0, 2, 3.x, 95, 98 et Me). Il a permis à Microsoft et son partenaire Intel d'entrer sur le marché des serveurs.
 
----
+La première version de Windows NT sort en 1993.
 
-![fit](images/unix-market-1999.png)
+Windows NT deviendra ensuite Windows 2000 puis fusionnera avec les systèmes Windows historiques avec Windows XP et suivants.
 
 ---
 
@@ -67,28 +82,79 @@ https://en.wikipedia.org/wiki/Windows_NT
 
 ---
 
+![fit](images/unix-market-1999.png)
+
+---
+
 ![fit](images/unix-market.png)
 
 ---
 
-# POSIX
+# Top 500 Supercomputers
 
-POSIX est une famille de normes techniques définie depuis 1988 par l'Institute of Electrical and Electronics Engineers (IEEE), et formellement désignée par IEEE 1003. Ces normes ont émergé d'un projet de standardisation des interfaces de programmation des logiciels destinés à fonctionner sur les variantes du système d'exploitation UNIX.
+![inline fit](images/top500.png)
 
-Le terme POSIX a été suggéré par Richard Stallman, qui faisait partie du comité qui écrivit la première version de la norme. L'IEEE choisit de le retenir car il était facilement mémorisable1,2. Les quatre premières lettres forment l’acronyme de Portable Operating System Interface (interface portable de système d'exploitation), et le X exprime l'héritage UNIX. 
+---
 
-Le grand nombre de systèmes Unix développés sur la base du System V de AT&T ou bien de BSD conduisit des membres du groupe d'utilisateurs /usr/group, qui a pris depuis le nom de UniForum, à forger un standard UNIX dès 1980 afin d'assurer une portabilité maximale entre les différents systèmes55 :
+# Clients Web
 
-    en 1984 ce groupe publie le standard /usr/group55,56.
-    ce standard évolue en POSIX, qui est publié en 198857, une série de standards développés sous couvert de l'IEEE (Institute of Electrical and Electronics Engineers). POSIX est ainsi également connu sous le nom IEEE 1003.
-    En 1985, AT&T publie SVID (System V Interface Definition), qui décrit System V58. Cette première définition est différente de POSIX.
-    À la même époque, un consortium de constructeurs (Sun, IBM, HP, DEC, AT&T, Unisys, ICL, etc.) publie le standard X/Open Portability Guide Issue 3 (XPG3). Ce standard s'occupe tout particulièrement des différences issues de la localisation géographique (date, alphabet, etc.).
+![inline fit](images/market-share-desktop.png) ![inline fit](images/market-share-web.png)
 
-Aujourd'hui, la marque déposée UNIX est détenue par l'Open Group. Pour obtenir l'autorisation d'utiliser officiellement cette marque pour un système d'exploitation, il faut que celui-ci soit conforme à la Single UNIX Specification59. 
+---
+
+# Pour aller plus loin
+
+- Peter Salus, "A quarter century of Unix" (1994)
+- Rob Pike, "Unix History" (2018) <https://www.youtube.com/watch?v=_2NI6t2r_Hs>
 
 ---
 
 # Interlude: la "philosophie Unix"
+
+---
+
+# Concepts clefs (70s)
+
+1. Processus (et mémoire virtuelle)
+2. Unification des périphériques/fichiers ("everything is a file")
+3. Shell (et pipes)
+4. Système de fichiers
+
+= Concepts hérités de Multics (en grande partie), mais simplifiés. Multics cherchait à tout faire, à être trop polyvalent, trop flexible, et a échoué.
+Vs. une des philosophies de base d'Unix était de "rester simple" ("KISS").
+
+---
+
+# Architecture d'origine (simplifiée)
+
+![right 70%](images/unix-arch.png)
+
+**Kernel** : Contrôle le système.
+Tâches principales : gestion des processus / communication avec les périphériques / système de fichiers.
+
+**Shell** : Interface utilisateur permettant de communiquer avec le système.
+Comprend un ensemble d'utilitaires shell de base. Permet la création de scripts.
+
+**Outils** : Le plus grand ensemble d'Unix.
+Outils développés pour aider l'utilisateur dans ses tâches, par exemple: édition et traitement de texte, développement, communication (mail), etc .
+
+---
+
+# Architecture moderne (POSIX)
+
+POSIX spécifie, dans dix-sept documents différents, les interfaces utilisateurs et les interfaces logicielles, la ligne de commande standard et l'interface de script qu'est le Bourne shell. Les autres commandes, services et utilitaires comprennent awk, echo, ed, et des centaines d'autres. Les services d'entrées/sorties de base (fichiers, terminaux, réseau) doivent être présents ; le système doit supporter certains attributs spécifiques pour les fichiers. POSIX définit aussi une interface de programmation standard, et celle-ci est prise en charge par la plupart des systèmes d'exploitation récents. 
+
+---
+
+# Outils de développement Unix
+
+- Editeur: `ed`, `vi` (-> vim), Emacs (-> GNU Emacs)
+- Compilateur(s): `cc`, autres
+- `make`
+- `diff` + `patch`
+- Plus tard: GCC et outils associés, `m4`, Automake / Autoconf...
+
+Lorsqu'un logiciel est diffusé sous forme de sources (et a été développé avec les outils GNU), l'installation se fait, souvent, par la séquence "`configure ; make ; make install`" ("CMMI")
 
 ---
 
@@ -98,6 +164,19 @@ Aujourd'hui, la marque déposée UNIX est détenue par l'Open Group. Pour obteni
 - Les gens voulaient un meilleur système informatique, plus efficace.
 - Ces personnes étaient logiques et pragmatiques dans leur réflexion.
 - Ils ont jeté les bases de : "La philosophie Unix"
+
+---
+
+# The invention of pipes (1973)
+
+"And in their ensuing conversation, the historian establishes that this was the moment that truly gave birth to **the idea that Unix is a collection of tools**.
+
+- Mahoney: Was the notion of toolbox there before pipes?
+- McIlroy: No.
+- Mahoney: Or did pipes create it?
+- McIlroy: Pipes created it.
+- Mahoney: Unix looked different after pipes?
+- McIlroy: Yes, the philosophy that everybody started putting forth, “**This is the Unix philosophy. Write programs that do one thing and do it well. Write programs to work together. Write programs that handle text streams, because that is a universal interface**.” All of those ideas, which add up to the tool approach, might have been there in some unformed way prior to pipes, but they really they came in afterwards.""
 
 ---
 
@@ -115,16 +194,19 @@ Aujourd'hui, la marque déposée UNIX est détenue par l'Open Group. Pour obteni
 
 ---
 
-# The invention of pipes (1973)
+# Brian Kernighan
 
-And in their ensuing conversation, the historian establishes that this was the moment that truly gave birth to the idea that Unix is a collection of tools.
+"Kernighan moved into his conclusion by asking what the technical legacy of Unix is. Some significant pieces of that legacy, including the hierarchical filesystem, use of high-level languages, and the programmable shell, have their origins in Multics. Others, including pipes, the whole tools concept, and regular expressions, are a direct result of the Unix work. And most importantly, he said, was that Unix brought a new philosophy on how to create software.
 
-- Mahoney: Was the notion of toolbox there before pipes?
-- McIlroy: No.
-- Mahoney: Or did pipes create it?
-- McIlroy: Pipes created it.
-- Mahoney: Unix looked different after pipes?
-- McIlroy: Yes, the philosophy that everybody started putting forth, “This is the Unix philosophy. Write programs that do one thing and do it well. Write programs to work together. Write programs that handle text streams, because that is a universal interface.” All of those ideas, which add up to the tool approach, might have been there in some unformed way prior to pipes, but they really they came in afterwards.
+Almost all of this was in place by 1975 and, he said, it may well be true that there have been no great insights into operating-system design since. Certainly Unix has seen a lot of additions, including networking, multiprocessor support, graphical interfaces, Unicode, and more. But it's all built on the foundation created nearly 50 years ago."
+
+---
+
+# Cont.
+
+"The creation of Unix was the result of an accidental combination of factors, starting with the juxtaposition of two exceptionally creative people "with good taste". Kernighan gave a lot of credit to "benign management" at Bell Labs that allowed this work to go forward, naming Doug McIlroy in particular. It was also spurred by the arrival of cheap hardware (in which category he included the $50,000 PDP-11 used to develop the system early on). But a key part was the Bell Labs working environment, which included stable funding and a long-term view, which is something that is hard to find today. 
+
+Source: <https://lwn.net/Articles/881431/>
 
 ---
 
@@ -179,11 +261,8 @@ Write code for humans to read, first!
 Design programs to be connected with other programs
 THINK PIPE!
 Stick with text streams for input and output.
-Avoid the use of user input (for example, prompt for “yes”), use command line
-flags instead.
-To make programs composable, make them independent. A program on one
-end of a text stream should care as little as possible about the program on the
-other end.
+Avoid the use of user input, use command line flags instead.
+To make programs composable, make them independent. A program on one end of a text stream should care as little as possible about the program on the other end.
 
 ---
 
@@ -194,8 +273,7 @@ The notion of “intricate and beautiful complexities” is almost an oxymoron.
 Complexity leads to bugs.
 Keep programs as simple as possible. Sometimes less is more.
 “Worse” is “better”.
-If other processing is required, consider writing another programming and
-exploiting composibility . . i.e. piping.
+If other processing is required, consider writing another programming and exploiting composibility . . i.e. piping.
 
 ---
 
@@ -213,10 +291,7 @@ A good ʻmanual pageʼ with examples also helps!
 
 Robustness is the child of transparency and simplicity.
 Program should work well. Minimize when it fails, and when it does fail, fail gracefully.
-Consider situations, just as accepting empty lists/strings/etc., even in
-places where a human would seldom or never supply an empty
-string, avoids having to special-case such situations when generating
-the input mechanically.
+Consider situations, just as accepting empty lists/strings/etc., even in places where a human would seldom or never supply an empty string, avoids having to special-case such situations when generating the input mechanically.
 
 ---
 
@@ -236,12 +311,7 @@ Avoid excessive features, novelty.
 
 When a program has nothing surprising to say, it should say nothing.
 
-I think that the terseness of Unix programs is a central feature of the style.
-When your program's output becomes another's input, it should be easy to
-pick out the needed bits. And for people it is a human-factors necessity —
-important information should not be mixed in with verbosity about internal
-program behavior. If all displayed information is important, important
-information is easy to find.
+> "I think that the terseness of Unix programs is a central feature of the style. When your program's output becomes another's input, it should be easy to pick out the needed bits. And for people it is a human-factors necessity — important information should not be mixed in with verbosity about internal program behavior. If all displayed information is important, important information is easy to find."
 -- Ken Arnold
 
 ---
@@ -258,15 +328,45 @@ Also, if possible, make it clear why it failed.
 Prototype before polishing. Get it working before you optimize it.
 
 “90% of the functionality delivered now is better than 100% of it delivered never!”
-- Kernighan & Plauger
-(Kernighan is co-author of the C Programming Book)
+- Kernighan & Plauger ("The Elements of Programming Style", 1974)
 
 “Premature optimization is the root of all evil”
 – Donald Knuth (Computing “Grandfather”)
 
 ---
 
-# Retour à la chronologue
+# discussion
+
+- Qu'est-ce qui manque ?
+- Les principes ci-dessus sont-ils universels ?
+- Limitations de la "philosophie Unix" ?
+
+---
+
+# GUI
+
+![inline](images/vt100.jpg) ![inline](images/motif.png)
+
+---
+
+# Autres éléments de discussion
+
+- Java - "Write once, run everywhere"
+- Le Web
+  - "Everything is a resource addressable by a URL"
+  -  "[Netscape will soon reduce Windows to] a poorly debugged set of device drivers." (Marc Andreessen, 1995)
+- Et plus généralement les systèmes distribués
+- Les langages de script (Perl, Python...) comme alternative au Shell
+
+Références:
+
+- Rob Pike: The Good, the Bad, and the Ugly: The Unix Legacy (2001)
+- Richard Gabriel: "Worse is better"
+- ...
+
+---
+
+# Retour à la chronologie du libre
 
 ---
 
@@ -374,11 +474,11 @@ Il s’agit d’un “logiciel libre” avec une licence très permissive.
 1989: Cygnus, première entreprise qui offre du support pour GNU
 1991: Linux 0.11: premiére version “autonome” (pour 386)
 1992: 386BSD 0.1 par William et Lynne Jolitz
-1992: US Air Force paye New York University (NYU) pour une suite Ada 95, sous licence GPL! NYU crée GNAT (GNU NYU Ada 95 Translator) avec GCC
+1992: US Air Force paye New York University (NYU) pour une suite Ada 95, sous licence GPL. NYU crée GNAT (GNU NYU Ada 95 Translator) avec GCC
 1992: distributions Slackware (Patrick Volkerding), S.u.S.E. en Allemagne
 1993: Ian Murdock crée Debian, et son “social contract”
 1993: FreeBSD 1.0 pour 386
-1994: GNAT crée Ada Core Technologies (ACT), qui vit du support, pas des licences
+1994: Fondation de Ada Core Technologies (ACT), qui vit du support de GNAT, pas des licences
 1994: Marc Ewing crée Red Hat
 
 ---
@@ -542,7 +642,6 @@ Source: <https://opensource.org/osd>
 - 1997: "Linux, mini OS contre maxi exploitation" (JC Guédon et B. Lang)
 - 1998: "Piège dans le cyberespace" (R. Di Cosmo) et "Le Hold-Up planétaire" (R. Di Cosmo et D. Nora)
 - 1999: "Open sources - voices of the open source revolution" (mutiples auteurs)
--  https://en.wikipedia.org/wiki/Worse_is_better ?
 
 ---
 
