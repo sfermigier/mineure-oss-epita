@@ -8,19 +8,128 @@ slide-transition: true
 
 ---
 
+# Dernières sessions
+
+- Unix et sa "philosophie"
+- Emergence du libre et de Linux
+- Définitions du logiciel libre et de l'open source
+
+---
+
 # Plan de la session
 
-- Un peu d'histoire (suite):
-  - Unix et sa "philosophie"
-  - Emergence du libre et de Linux
-- La définition de l'open source
+- Errata et compléments
+- Histoire (suite et fin)
+- Texte(s) fondateur(s)
+- Economie du logiciel
+
+---
+
+# Errata et compléments
+
+- Sun = "Stanford University Network"
+- LiSP
+- Oubli de parler du "GNU Manifesto"
+
+---
+
+# LiSP @ FSF
+
+- Emacs-Lisp
+- GCL (GNU Common Lisp) - dernière release en 2014
+- Guile (1993-...)
+- Guix (2013-...) and Guix System
+
+---
+
+# GNU Manifesto (~1983)
+
+"GNU, which stands for Gnu's Not Unix, is the name for the complete Unix-compatible software system which I am writing so that I can give it away free to everyone who can use it [1]. Several other volunteers are helping me. Contributions of time, money, programs and equipment are greatly needed."
+
+"GNU will be able to run Unix programs, but will not be identical to Unix." "Unix is not my ideal system, but it is not too bad."
+
+"I consider that the Golden Rule requires that if I like a program I must share it with other people who like it."
+
+"GNU is not in the public domain. Everyone will be permitted to modify and redistribute GNU, but no distributor will be allowed to restrict its further redistribution."
+
+"I have found many other programmers who are excited about GNU and want to help."
+
+---
+
+# The Open Source Definition
+
+**Introduction**
+Open source doesn't just mean access to the source code. The distribution terms of open-source software must comply with the following criteria:
+
+**1. Free Redistribution**
+The license shall not restrict any party from selling or giving away the software as a component of an aggregate software distribution containing programs from several different sources. The license shall not require a royalty or other fee for such sale.
+
+**2. Source Code**
+The program must include source code, and must allow distribution in source code as well as compiled form. Where some form of a product is not distributed with source code, there must be a well-publicized means of obtaining the source code for no more than a reasonable reproduction cost, preferably downloading via the Internet without charge. The source code must be the preferred form in which a programmer would modify the program. Deliberately obfuscated source code is not allowed. Intermediate forms such as the output of a preprocessor or translator are not allowed.
+
+---
+
+# The Open Source Definition
+
+**3. Derived Works**
+The license must allow modifications and derived works, and must allow them to be distributed under the same terms as the license of the original software.
+
+**4. Integrity of The Author's Source Code**
+The license may restrict source-code from being distributed in modified form only if the license allows the distribution of "patch files" with the source code for the purpose of modifying the program at build time. The license must explicitly permit distribution of software built from modified source code. The license may require derived works to carry a different name or version number from the original software.
+
+---
+
+# The Open Source Definition
+
+**5. No Discrimination Against Persons or Groups**
+The license must not discriminate against any person or group of persons.
+
+**6. No Discrimination Against Fields of Endeavor**
+The license must not restrict anyone from making use of the program in a specific field of endeavor. For example, it may not restrict the program from being used in a business, or from being used for genetic research.
+
+**7. Distribution of License**
+The rights attached to the program must apply to all to whom the program is redistributed without the need for execution of an additional license by those parties.
+
+---
+
+# The Open Source Definition
+
+**8. License Must Not Be Specific to a Product**
+The rights attached to the program must not depend on the program's being part of a particular software distribution. If the program is extracted from that distribution and used or distributed within the terms of the program's license, all parties to whom the program is redistributed should have the same rights as those that are granted in conjunction with the original software distribution.
+
+**9. License Must Not Restrict Other Software**
+The license must not place restrictions on other software that is distributed along with the licensed software. For example, the license must not insist that all other programs distributed on the same medium must be open-source software.
+
+**10. License Must Be Technology-Neutral**
+No provision of the license may be predicated on any individual technology or style of interface.
+
+---
+
+# Licences reconnues par l'OSI vs. FSF
+
+OSI: 
+- https://opensource.org/licenses/alphabetical
+- 117 licences
+
+FSF:
+- https://www.gnu.org/licenses/license-list.html
+- ~98 licences
+
+---
+
+![60%](images/licences-1.png)
+
+---
+
+![fill](images/licences-2.png)
 
 ---
 
 # -> Les grandes controverses du libre
 
-- "Free" vs. "Open Source"
+- "Free Software" vs. "Open Source"
 - Idéologie vs. pragmatisme
+- Noyau monolithique vs. micronoyau
 - "Linux" vs. "GNU/Linux"
 - GPL vs licences "permissives"
 - Faut-il faire évoluer les définitions (FSF et OSI) pour prendre en compte certaines dimensions éthiques ? Pour éviter les abus des géants du cloud ?
@@ -60,10 +169,33 @@ slide-transition: true
 
 ---
 
+# Développement collaboratif
+
+[.column]
+- 1990: CVS (Concurrent Versions System) sous licence GPL
+- 1999: Sourceforge.net (par VA Linux), code source -> Apache Allura en 2013
+- 2000: Subversion (-> Apache Subversion en 2010)
+- 2000: BerliOS (fermé en 2014)
+- 2004: Trac (Edgewall Software)
+- 2005: Git (Linus Torvalds) et Mercurial (Matt Mackall -> Olivia Mackall)
+
+[.column]
+- 2006: Google Code (fermé en 2016) 
+- 2006: Redmine (Jean-Philippe Lang)
+- 2008: Bitbucket et GitHub (propriétaires)
+- 2010: Phabricator (Faebook)
+- 2011: Gitlab (licence MIT + propriétaire)
+- 2017: rachat de GitHub par Microsoft pour 7 Mrd de $
+- 2019: Sourcehut (Drew DeVault)
+- 2021: IPO de Gitlab
+
+---
+
 # Les textes fondateurs
 
 (Attention: sélection personnelle)
 
+- 1985: "The GNU Manifesto" (RMS)
 - 1984: "Hackers: Heroes of the Computer Revolution" (S. Levy)
 - 1997: "The Cathedral and the Bazaar" (E. S. Raymond)
 - 1997: "Linux, mini OS contre maxi exploitation" (JC Guédon et B. Lang)
@@ -127,7 +259,7 @@ slide-transition: true
 # Pop quizz
 
 - Comment sont développés ces langages ?
-- Qu'est-ce qui manque dans cette liste ? Pourquoi ? Est-ce justfié ?
+- Qu'est-ce qui manque dans cette liste ? Pourquoi ? Est-ce justifié ?
 
 ---
 
@@ -170,9 +302,17 @@ slide-transition: true
 
 # 2010 - RISC-V
 
+![right fill](images/riscv-computer.jpg)
+
 RISC-V (« RISC five ») est une architecture de jeu d'instructions (*instruction set architecture* ou ISA) RISC ouverte et libre, disponible en versions 32, 64 et 128 bits. Ses spécifications sont ouvertes et peuvent être utilisées librement par l'enseignement, la recherche et l'industrie. Les specifications sont ratifiées de façon ouverte par la communauté internationale des développeurs.
 
 Il en existe des implémentations libres (et d'autres non).
+
+---
+
+![inline](images/riscv-news-1.png) ![inline](images/riscv-news-2.png)
+
+![inline](images/riscv-news-3.png) ![inline](images/riscv-news-4.png)
 
 ---
 
