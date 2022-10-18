@@ -4,7 +4,7 @@ build-lists: true
 slide-transition: true
 
 # Mineure OSS @ EPITA
-## Session 4 (draft)
+## Session 4
 
 ---
 
@@ -20,7 +20,7 @@ slide-transition: true
 
 # Cette session (et la suivante?)
 
-- (Économie du logiciel - suite)
+- (Économie du logiciel - suite et fin. Cf. slides "Session 3.5")
 - Droit du logiciel
 - Droit du logiciel libre
 
