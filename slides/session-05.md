@@ -19,32 +19,34 @@ slide-transition: true
 # Apparté: évaluation
 
 - Participation à l'OSXP (8 nov.)
+  - Note: 35% (TBC)
   - Restitution par écrit (15 nov.)
   - Modèle: <https://reinout.vanrees.org/weblog/2022/06/16/rotterdam-meetup.html>
 
-- Projet final en groupes (65% - TBC)
+- Projet final en groupes
+  - Note: 65% (TBC)
   - Etude de cas -> restitution écrite puis orale (13 déc.)
   - TODO: constituer les groupes (2-4 personnes)
 
 ---
 
-# Juridique
+# Juridique (suite)
 
-Sources (rappel):
+Sources de la majorité des slides:
 
-- Slides de Stefano Zacchiroli (dérivés de ceux de Roberto Di Cosmo)
-- Slides de Dirk Riehle
-- Slides de François Pellegrini
+- Cours de Stefano Zacchiroli (dérivés de ceux de Roberto Di Cosmo)
 
 ---
 
 # Retour sur la présentation de Lessig
 
 - Forme
-  - Methodes "Matz", "Lessig", "Pecha Kucha" (20x20), "Ignite" (20x15
+  - Methodes "Matz" [1], "Lessig", "Pecha Kucha" (20x20), "Ignite" (20x15)
 - Fond
   - DRM / "Code is law"
   - Bien commun vs. intérêts particuliers
+
+[1]: Yukihiro Matsumoto, créateur de Ruby
 
 ---
 
