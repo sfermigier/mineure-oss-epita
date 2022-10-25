@@ -572,6 +572,10 @@ Sources de la majorité des slides:
 
 ---
 
+![fit](orig/zack-licenses/slide-021.png)
+
+---
+
 # Crédits
 
 ---
