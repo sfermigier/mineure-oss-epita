@@ -4,7 +4,7 @@ build-lists: true
 slide-transition: true
 
 # Mineure OSS @ EPITA
-## Session 6 (draft)
+## Session 6
 
 ---
 
@@ -32,7 +32,7 @@ slide-transition: true
   - Speakers (intervenants)
   - Sponsors / exposants
 
---- 
+---
 
 # Typologie
 
@@ -60,7 +60,7 @@ slide-transition: true
 
 ---
 
-# Mission OSXP
+# "Mission OSXP"
 
 - Participe de l'évaluation de la mineure OSS (35% de la note finale)
 - Prévoir une visite de l'OSXP le 8 novembre (ou à un autre moment)
