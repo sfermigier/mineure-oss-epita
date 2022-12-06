@@ -333,6 +333,7 @@ Also, if possible, make it clear why it failed.
 ---
 
 # Rule of Optimization
+
 Prototype before polishing. Get it working before you optimize it.
 
 “90% of the functionality delivered now is better than 100% of it delivered never!”
