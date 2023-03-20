@@ -1,41 +1,57 @@
 # Mineure OSS à l'EPITA (Q4 2022)
 
-[Pitch de présentation](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/mineure-oss-2022.pdf)
+[Pitch de présentation](./raw/main/slides/mineure-oss-2022.pdf)
 
-[Planning](https://github.com/sfermigier/mineure-oss-epita/blob/main/slides/plan-2022.md)
-
+[Planning](./blob/main/slides/plan-2022.md)
 
 ## Sessions
 
-- Session 1:
-  - [Histoire de l'Open Source](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-01%20-%20History.pdf)
+### Session 1
 
-- Session 2:
-  - [Histoire de l'Open Source (suite)](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-02%20-%20History.pdf)
+- [Histoire de l'Open Source](./raw/main/slides/session-01%20-%20History.pdf)
 
-- Session 3:
-  - [Histoire de l'Open Source (fin)](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-03%20-%20History.pdf)
-  - [L'industrie du logiciel](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-03.5%20-%20The%20Software%20Industry.pdf)
+### Session 2
 
-- Session 4:
-  - L'industrie du logiciel (suite)
-  - [Droit du logiciel (libre)](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-04.pdf)
+- [Histoire de l'Open Source (suite)](./raw/main/slides/session-02%20-%20History.pdf)
 
-- Session 5:
-  - [Droit du logiciel (libre)](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-05.pdf)
+### Session 3
 
-- Session 6:
-  - [Droit du logiciel (libre) - suite](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-06.pdf)
+- [Histoire de l'Open Source (fin)](./raw/main/slides/session-03%20-%20History.pdf)
+- [L'industrie du logiciel](./raw/main/slides/session-03.5%20-%20The%20Software%20Industry.pdf)
 
-- Session 7:
-  - [Droit du logiciel (libre) - suite](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-07.pdf)
-  - [XWiki: un éditeur de logiciel libre](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-07.5-xwiki-business-models.pdf)
+### Session 4
 
-- Session 8:
-  - [](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-08.pdf)
-  - [OSS Supply Chain & Security](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-08.5 - Supply chain security.pdf)
-  - [Marché du Logiciel Libre](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-08.5 - marche oss 2022.pdf)
+- L'industrie du logiciel (suite)
+- [Droit du logiciel (libre)](./raw/main/slides/session-04.pdf)
 
-- Session 10:
-  - [OSPO, Gouvernance, Fondations](https://github.com/sfermigier/mineure-oss-epita/raw/main/slides/session-10 - Open Source Governance & Innersource.pdf)
+### Session 5
 
+- [Droit du logiciel (libre)](./raw/main/slides/session-05.pdf)
+
+### Session 6
+
+- [Droit du logiciel (libre) - suite](./raw/main/slides/session-06.pdf)
+
+### Session 7
+
+- [Droit du logiciel (libre) - fin](./raw/main/slides/session-07.pdf)
+- Intervention de Ludovic Dubost (XWiki):
+  - [XWiki: un éditeur de logiciel libre](./raw/main/slides/session-07.5-xwiki-business-models.pdf)
+
+### Session 8
+
+- [OSS Supply Chain & Security](./raw/main/slides/session-08.5 - Supply chain security.pdf)
+- [Marché du Logiciel Libre](./raw/main/slides/session-08.5 - marche oss 2022.pdf)
+- [Marché du travail OSS en France (2018)](./raw/main/slides/session-08.5 - marche-travail-oss-2018.pdf)
+- [Marché du travail OSS en France (2021)](./raw/main/slides/session-08.5 - opiiec 2021 (short).pdf)
+
+### Session 9
+
+- Intervention de Jean-Paul Smets (Nexedi / Rapid.Space)
+- Intervention de Bastien Guerry (Etalab).
+
+### Session 10
+
+- Intervention de Florent Zara (Eclipse Foundation):
+  - [OSPO, Gouvernance, Fondations](./raw/main/slides/session-10 - Open Source Governance & Innersource.pdf)
+  - [Setting up an OSPO at a power utility](./raw/main/slides/session-10.1-Building_an_OSPO_at_RTE.pdf)
