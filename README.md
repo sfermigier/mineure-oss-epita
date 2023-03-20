@@ -22,7 +22,7 @@
 ### Session 4
 
 - L'industrie du logiciel (suite)
-- [Droit du logiciel (libre)](./raw/main/slides/session-04.pdf)
+- [Droit du logiciel / Droit du logiciel libre](./raw/main/slides/session-04.pdf)
 
 ### Session 5
 
@@ -31,19 +31,20 @@
 ### Session 6
 
 - [Droit du logiciel (libre) - suite](./raw/main/slides/session-06.pdf)
+- [Produire du logiciel libre](./raw/main/slides/session-06.5 - Production + Community.pdf)
 
 ### Session 7
 
-- [Droit du logiciel (libre) - fin](./raw/main/slides/session-07.pdf)
+- Droit du logiciel (libre) - fin (cf. slides de la session précédente)
 - Intervention de Ludovic Dubost (XWiki):
   - [XWiki: un éditeur de logiciel libre](./raw/main/slides/session-07.5-xwiki-business-models.pdf)
 
 ### Session 8
 
 - [OSS Supply Chain & Security](./raw/main/slides/session-08.5 - Supply chain security.pdf)
-- [Marché du Logiciel Libre](./raw/main/slides/session-08.5 - marche oss 2022.pdf)
-- [Marché du travail OSS en France (2018)](./raw/main/slides/session-08.5 - marche-travail-oss-2018.pdf)
-- [Marché du travail OSS en France (2021)](./raw/main/slides/session-08.5 - opiiec 2021 (short).pdf)
+- [Marché du Logiciel Libre (étude CNLL, 2022)](./raw/main/slides/session-08.5 - marche oss 2022.pdf)
+- [Marché du travail OSS en France (étude CNLL, 2018)](./raw/main/slides/session-08.5 - marche-travail-oss-2018.pdf)
+- [Marché du travail OSS en France (étude OPIIEC, 2021)](./raw/main/slides/session-08.5 - opiiec 2021 (short).pdf)
 
 ### Session 9
 
